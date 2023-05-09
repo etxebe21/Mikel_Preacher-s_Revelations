@@ -327,40 +327,50 @@ function heroesArmorTotalValue()
 heroesArmorTotalValue();
 console.log("///////////////////////////////////////////////////////////");
 
-// //4.- Mostrar la lista de armas que puede utilizar el Héroe alias "Chonifer" siempre y cuando pueda pagarlas con el oro que dispone. 
-// //Los artículos se irán comprando en el orden en el que están expuestos. Mostrar el oro restante.
-// console.log("/4.- Mostrar la lista de armas que puede utilizar el Héroe alias Chonifer siempre y cuando pueda pagarlas con el oro que dispone. ");
-// function choniferWeaponsPosibles()
-// {
-//   for (let i = 0; i < data.weapons.length; i++)
-//   {
-//     if (data.weapons[i].price < 8310)
-//     {
-//       console.log("Lista de armas que puede utilizar Chonifer: " + data.weapons[i].name + " --- Precio: " + data.weapons[i].price);
-//         }
-//   }
-//   let prices = [data.weapons[0].price];
-//     console.log(prices);  
-// }
-// choniferWeaponsPosibles();
-// console.log("////////////////////////////////////////////////////////////");
+//4.- Mostrar la lista de armas que puede utilizar el Héroe alias "Chonifer" siempre y cuando pueda pagarlas con el oro que dispone. 
+//Los artículos se irán comprando en el orden en el que están expuestos. Mostrar el oro restante.
+console.log("/4.- Mostrar la lista de armas que puede utilizar el Héroe alias Chonifer siempre y cuando pueda pagarlas con el oro que dispone. ");
+function choniferWeaponsPosibles()
+{
+  for (let i = 0; i < data.weapons.length; i++)
+  {
+    if (data.weapons[i].price < 8310)
+    {
+      console.log("Lista de armas que puede utilizar Chonifer: " + data.weapons[i].name + " --- Precio: " + data.weapons[i].price);
+    }
+  }
+  let prices1 = [data.weapons[0].price];
+  let prices2 = [data.weapons[1].price];
+  let prices3 = [data.weapons[2].price];
+  let uno = 8310 - prices1;
+  console.log("Oro restante al usar Sword of Destiny: " + uno);
+  let dos = uno - prices2;
+  console.log("Oro restante Mace of Chaos: " + dos);
+  let tres = dos - prices3;
+  console.log("Oro restante Axe of Fury: " + tres);
+  console.log("No es posible usar mas ya que no llega el oro");
+  
+     
+}
+choniferWeaponsPosibles();
+console.log("////////////////////////////////////////////////////////////");
 
-// //5.- Mostrar todas las piezas de armadura con su defensa, sin repeticiones.
+//5.- Mostrar todas las piezas de armadura con su defensa, sin repeticiones.
 
-// console.log("//5.- Mostrar todas las piezas de armadura con su defensa, sin repeticiones.");
-// function posibleUnicArmors()
-// {
-//   const totalArmors = [];
-//   for(let i = 0; i< data.epicHeroes.length;i++)
-//   {
-//       const armorU = data.epicHeroes[i].armor;
-//       if(!totalArmors.includes(data.epicHeroes[i].armor))
-//       {
-//           totalArmors.push(armorU);
-//       }
-//   }
-//   console.log("Piezas de armadura con su defensa sin repeteciones: ")
-//   console.log(totalArmors);
-// }
-// posibleUnicArmors();
+console.log("//5.- Mostrar todas las piezas de armadura con su defensa, sin repeticiones.");
+function posibleUnicArmors()
+{
+  const totalArmors = [];
+  for(let i = 0; i< data.epicHeroes.length;i++)
+  {
+      const armorU = data.epicHeroes[i].armor;
+      if(!totalArmors.includes(data.epicHeroes[i].armor))
+      {
+          totalArmors.push(armorU);
+      }
+  }
+  console.log("Piezas de armadura con su defensa sin repeteciones: ")
+  console.log(totalArmors);
+}
+posibleUnicArmors();
 
