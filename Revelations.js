@@ -328,7 +328,7 @@ function heroesArmorTotalValue()
   
 }
 heroesArmorTotalValue();
-console.log("///////////////////////////////////////////////////////////")
+console.log("///////////////////////////////////////////////////////////");
 
 //4.- Mostrar la lista de armas que puede utilizar el Héroe alias "Chonifer" siempre y cuando pueda pagarlas con el oro que dispone. 
 //Los artículos se irán comprando en el orden en el que están expuestos. Mostrar el oro restante.
@@ -346,7 +346,24 @@ function choniferWeaponsPosibles()
     console.log(prices);  
 }
 choniferWeaponsPosibles();
-
+console.log("////////////////////////////////////////////////////////////");
 
 //5.- Mostrar todas las piezas de armadura con su defensa, sin repeticiones.
-// console.log(data.epicHeroes.armor.defense);
+
+console.log("//5.- Mostrar todas las piezas de armadura con su defensa, sin repeticiones.");
+function posibleUnicArmors()
+{
+  const totalArmors = [];
+  for(let i = 0; i< data.epicHeroes.length;i++)
+  {
+      const armorU = data.epicHeroes[i].armor;
+      if(!totalArmors.includes(data.epicHeroes[i].armor))
+      {
+          totalArmors.push(armorU);
+      }
+  }
+  console.log("Piezas de armadura con su defensa sin repeteciones: ")
+  console.log(totalArmors);
+}
+posibleUnicArmors();
+
