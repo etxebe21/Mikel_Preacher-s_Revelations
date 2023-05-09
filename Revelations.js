@@ -312,8 +312,26 @@ function heroesAliasLevel20AndAligmentChaotic()
 heroesAliasLevel20AndAligmentChaotic();
 console.log("////////////////////////////////////////////////");
 //3.- Mostrar la lista de Héroes (nombre) y la suma total de defensa que proporciona la armadura.
+console.log("3.- Mostrar la lista de Héroes (nombre) y la suma total de defensa que proporciona la armadura.");
+function heroesArmorTotalValue()
+{
+  let totalArmor = 0;
+  for(let i = 0; i < data.epicHeroes.length; i++)
+  {
+    console.log("Lista de heroes: " + data.epicHeroes[i].name);
+    // console.log("Armadura total: " + data.epicHeroes.armor.name[i].defense);
+  }
+  for(let i = 0; i < data.epicHeroes.length; i++)
+  {
+    console.log("Armor : " + data.epicHeroes[i].armor.defense);
+  }
+  
+}
+heroesArmorTotalValue();
 
 //4.- Mostrar la lista de armas que puede utilizar el Héroe alias "Chonifer" siempre y cuando pueda pagarlas con el oro que dispone. 
 //Los artículos se irán comprando en el orden en el que están expuestos. Mostrar el oro restante.
 
+
 //5.- Mostrar todas las piezas de armadura con su defensa, sin repeticiones.
+// console.log(data.epicHeroes.armor.defense);
