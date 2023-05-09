@@ -302,14 +302,14 @@ function heroesAliasLevel20AndAligmentChaotic()
 {
   for(let i = 0; i < data.epicHeroes.length; i++)
   {
-    if(data.epicHeroes[i].level > 20 && data.epicHeroes[i].aligment === "Chaotic")
+    if(data.epicHeroes[i].level > 20 || data.epicHeroes[i].alignment === "Chaotic")
     {
-    
-    }
-    console.log("Alias de heroes con level mayor que 20: " + data.epicHeroes[i].alias);
-  } 
+      console.log("Alias de heroes con level mayor que 20: " + data.epicHeroes[i].alias);
+    } 
+  }  
 }
 heroesAliasLevel20AndAligmentChaotic();
+
 console.log("////////////////////////////////////////////////");
 //3.- Mostrar la lista de Héroes (nombre) y la suma total de defensa que proporciona la armadura.
 console.log("3.- Mostrar la lista de Héroes (nombre) y la suma total de defensa que proporciona la armadura.");
